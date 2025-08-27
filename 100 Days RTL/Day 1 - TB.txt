@@ -1,0 +1,41 @@
+//Design and verify a 2:1 mux
+
+
+//TB
+module day1_tb;
+
+  logic [7:0] a_i;
+  logic [7:0] b_i;
+  logic       sel_i;
+  logic [7:0] y_o;
+
+  day1 DUT (.*);
+/*day1 DUT (
+  .a_i(a_i),   // connect DUT port a_i to TB signal a_i
+  .b_i(b_i),   // connect DUT port b_i to TB signal b_i
+  .sel_i(sel_i), // connect DUT port sel_i to TB signal sel_i
+  .y_o(y_o)    // connect DUT port y_o to TB signal y_o
+);*/
+  
+  initial begin
+    // Test 1
+    a_i = 8'h10; b_i = 8'h20; sel_i = 0; #5;
+    $display("sel=%0b a=%0d b=%0d y=%0d", sel_i, a_i, b_i, y_o);
+
+    // Test 2
+    a_i = 8'd10; b_i = 8'd20; sel_i = 1; #5;
+    $display("sel=%0b a=%0d b=%0d y=%0d", sel_i, a_i, b_i, y_o);
+
+    // Test 3
+    a_i = 8'd100; b_i = 8'd50; sel_i = 0; #5;
+    $display("sel=%0b a=%0d b=%0d y=%0d", sel_i, a_i, b_i, y_o);
+
+    // Test 4
+    a_i = 8'd100; b_i = 8'd50; sel_i = 1; #5;
+    $display("sel=%0b a=%0d b=%0d y=%0d", sel_i, a_i, b_i, y_o);
+
+    $display("Test Completed!");
+    $finish;
+  end
+
+endmodule
