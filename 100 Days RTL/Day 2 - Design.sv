@@ -1,4 +1,4 @@
-
+//©2025 Tomer Elis - All Rights Reserved.
 // ============================================
 // Module: day2
 // Purpose: Three D-FF variants:
