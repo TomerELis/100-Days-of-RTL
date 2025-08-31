@@ -1,6 +1,7 @@
 // ============================================
 // Module: day5
 // Purpose: Odd counter
+// Date: August 31, 2025
 // Tomer Elis
 // ============================================
 
@@ -22,3 +23,4 @@ module day5 (
     
 
 endmodule
+
