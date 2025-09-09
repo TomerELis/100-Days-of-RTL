@@ -1,0 +1,5 @@
+# Day 8 Question
+![Day 8 Question](https://github.com/user-attachments/assets/2d53bffa-5673-4e16-8b45-a61fa9c943e5)
+
+# waves
+![waves_img](https://github.com/user-attachments/assets/304a139b-7975-4d54-bb68-62ca2b02e187)
