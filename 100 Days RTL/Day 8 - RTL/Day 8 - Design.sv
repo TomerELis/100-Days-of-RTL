@@ -5,7 +5,7 @@
 // Tomer Elis
 
 //Explanation: This module converts a binary number into a one-hot representation in hex.
-//Example: If the binary input is 01001 (which equals 9 in decimal), the one-hot output will be 0x0200.
+//Example: If the binary input is 01001 (which equals 9 in decimal), the one-hot output will be 0x0200 (512 in decimal and 0100000000 in binary).
 // ============================================
 
 //Note: The # after a module name is used for parameters.
@@ -21,3 +21,4 @@ module day8#(
   assign one_hot_o = 1 << bin_i;
 
 endmodule
+
