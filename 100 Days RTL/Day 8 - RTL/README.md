@@ -3,3 +3,4 @@
 
 # waves
 ![waves_img](https://github.com/user-attachments/assets/304a139b-7975-4d54-bb68-62ca2b02e187)
+![side](https://github.com/user-attachments/assets/4a21e763-2c44-417f-aec1-714a357163e6)
