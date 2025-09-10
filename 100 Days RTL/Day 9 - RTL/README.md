@@ -1,4 +1,8 @@
 # Day 9 Question
+//Explanation: binary-to-Gray code converter. (MSB) stays the same, each next bit = XOR of the current
+//binary bit and the previous binary bit.
+//Example: Input (binary): 0100   Output (gray): 0110
+
 ![Day 9 Question](https://github.com/user-attachments/assets/b1f86b1d-f4e0-432e-abb2-7cae68cc1274)
 
 # waves
