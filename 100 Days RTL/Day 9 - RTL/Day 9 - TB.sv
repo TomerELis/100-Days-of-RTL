@@ -1,6 +1,6 @@
 // ============================================
 // Module: day9 TB
-// Purpose: Binary to one-hot
+// Purpose: binary-to-Gray code converter
 // Date: September 10, 2025
 // Tomer Elis
 
@@ -29,3 +29,4 @@ module day9_tb ();
   end
 
 endmodule
+
