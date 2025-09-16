@@ -28,10 +28,10 @@ module day10 (
       temp_ff <= 4'b0;                                           
     else if (load_i && temp_ff == 4'b1111)	 	           //case 2: reload when counter reaches max
       temp_ff <= load_val_i;
-    else if (temp_ff == 4'b1111) 				               //case 3: wrap to zero (no reload)
+    else if (temp_ff == 4'b1111) 				            //case 3: wrap to zero (no reload)
       temp_ff <= 4'b0;
     else
-      temp_ff <= temp_ff+1;														//case 4: normal counting
+      temp_ff <= temp_ff+1;									//case 4: normal counting
     
     	
   end
@@ -44,6 +44,7 @@ endmodule
 
 
 //Bug I had: there is a difference between 4'b1 and 4'b1111.
+
 
 
 
