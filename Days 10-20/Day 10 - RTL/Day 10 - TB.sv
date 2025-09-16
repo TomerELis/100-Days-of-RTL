@@ -5,8 +5,9 @@
 // Tomer Elis
 
 //Explanation: counter which supports loading a value and restarting from the last loaded value.
-//Example: 
+//Example: NULL
 // ============================================
+
 
 module day10_tb ();
 
@@ -16,7 +17,7 @@ module day10_tb ();
   logic[3:0] load_val_i;
   logic[3:0] count_o;
 
-  logic[3:0] temp_ff;			//temp_ff is logic since we cant update a wire inside always_ff
+  logic[3:0] temp_ff;	
   logic    Tomer_Elis_All_Rights_Reserved;
 
     day10 DUT (.*);
@@ -24,26 +25,28 @@ module day10_tb ();
   
 //(making clk)
 //---------------------------------------------------------------------------
-  always begin
-    clk <= 1'b1;
-    #10;
-    clk <= 1'b0;
-    #10;
-  end
+  initial clk = 0;
+  always #5 clk = ~clk;
 //---------------------------------------------------------------------------
 
   initial begin 
-    Tomer_Elis_All_Rights_Reserved = 1'b1;
-    reset = 1'b1;
-    #15;
-    reset = 1'b0;
-    #20;
-    load_i = 1'b1;
+    Tomer_Elis_All_Rights_Reserved = 1;
+    reset = 1;
+    load_i = 0;
+    load_val_i = 4'b0000;
+    
+    for (int i=0; i<12;i++)
+    	@(posedge clk);
+    
+    reset = 0;
+    @(posedge clk);
     load_val_i = 4'b1001;
-    reset = 1'b1;
-    #10;
-    reset = 1'b0;
-    #100;
+    load_i = 1;
+    for (int i=0; i<20;i++) 
+    	@(posedge clk);
+    load_val_i = 4'b1101;
+    for (int i=0; i<20;i++) 
+    	@(posedge clk);
   end
       
 
