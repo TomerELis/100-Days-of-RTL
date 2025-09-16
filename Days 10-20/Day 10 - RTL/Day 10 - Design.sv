@@ -24,7 +24,7 @@ module day10 (
 //sequential part
 //-------------------------------------------------------------------------------------
   always_ff @(posedge clk or posedge reset) begin			//four possible cases
-    if (reset)			//case 1: reset -> clear counter
+    if (reset)			                          //case 1: reset -> clear counter
       temp_ff <= 4'b0;
     else if (load_i && temp_ff == 4'b1111)	 				  //case 2: reload when counter reaches max
       temp_ff <= load_val_i;
@@ -44,4 +44,5 @@ endmodule
 
 
 //Bug I had: there is a difference between 4'b1 and 4'b1111.
+
 
